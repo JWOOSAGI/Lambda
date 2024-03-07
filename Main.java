@@ -4,12 +4,13 @@ import crawler.CrawlerView;
 import user.UserView;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SQLException {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         Scanner sc = new Scanner(System.in);
@@ -24,7 +25,7 @@ public class Main {
             switch (sc.next()){
                 case "0":  return;
                 case "1": UserView.main(sc);break;
-                case "2": BoardView.main(); break;
+                case "2": BoardView.main(sc); break;
                 case "3": AccountView.main(sc); break;
                 case "4": CrawlerView.main(sc); break;
             }

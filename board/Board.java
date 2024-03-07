@@ -1,22 +1,19 @@
 package board;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 
-@NoArgsConstructor
+import lombok.*;
+
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-@ToString
-
+@ToString(exclude = {"id"})
 public class Board {
-    private int id;
-    private String title;
-    private String content;
-    private String writer;
+    private Long id;
+    private String boardName;
+    private String boardType;
 
-  @Builder (builderMethodName = "builder")
-  public Board(int id, String title, String content, String writer) {
-
-  }
+    @Builder(builderMethodName = "builder")
+    public Board(String boardName, String boardType) {
+        this.boardName = boardName;
+        this.boardType = boardType;
+    }
 }

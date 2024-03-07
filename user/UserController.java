@@ -1,5 +1,6 @@
 package user;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -8,9 +9,11 @@ import java.util.Scanner;
 public class UserController {
 
     UserServiceImpl service;
+//    UserRepository repository;
 
     public UserController() {
         this.service = UserServiceImpl.getInstance();
+//        this.repository  = UserRepository.getInstance();
     }
 
     public String addUsers() {
@@ -90,4 +93,10 @@ public class UserController {
         return service.getUserMap();
     }
 
+    public String test() {
+        return service.test();
+    }
+
+    public List<?> findUsers() throws SQLException {
+        return service.findUsers();}
 }
