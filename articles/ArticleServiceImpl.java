@@ -1,8 +1,8 @@
-package articles;
+package com.von.api.articles;
 
 
-import common.AbstractService;
-import enums.Messenger;
+import com.von.api.common.AbstractService;
+import com.von.api.enums.Messenger;
 
 import java.sql.SQLException;
 import java.util.List;

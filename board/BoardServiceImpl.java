@@ -1,6 +1,4 @@
-package board;
-
-import crawler.CrawlerServiceImpl;
+package com.von.api.board;
 
 public class BoardServiceImpl implements BoardService {
     private static BoardServiceImpl instance = new BoardServiceImpl();

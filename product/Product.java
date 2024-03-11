@@ -1,4 +1,4 @@
-package product;
+package com.von.api.product;
 
 public class Product {
     public String systemOut(){

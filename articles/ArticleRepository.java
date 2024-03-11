@@ -1,4 +1,4 @@
-package articles;
+package com.von.api.articles;
 
 
 import java.sql.*;
@@ -30,7 +30,7 @@ public class ArticleRepository {
 
     public List<?> findAll() throws SQLException {
         List<Article> ls = new ArrayList<>();
-        String sql = "select * from articles";
+        String sql = "select * from com.von.api.articles";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         ResultSet rs = pstmt.executeQuery();
         if(rs.next()){

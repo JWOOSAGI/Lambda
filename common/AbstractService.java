@@ -1,7 +1,6 @@
-package common;
+package com.von.api.common;
 
-import enums.Messenger;
-import user.User;
+import com.von.api.enums.Messenger;
 
 import java.sql.SQLException;
 import java.util.List;

@@ -1,4 +1,4 @@
-package proxy;
+package com.von.api.proxy;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;

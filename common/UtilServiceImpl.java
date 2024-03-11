@@ -1,4 +1,4 @@
-package common;
+package com.von.api.common;
 
 public class UtilServiceImpl implements UtilService {
 

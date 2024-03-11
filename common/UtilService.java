@@ -1,4 +1,4 @@
-package common;
+package com.von.api.common;
 
 public interface UtilService {
     int createRandomInteger(int start, int gapBetweenStartAndEnd);

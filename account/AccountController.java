@@ -1,6 +1,6 @@
-package account;
+package com.von.api.account;
 
-import enums.Messenger;
+import com.von.api.enums.Messenger;
 
 import java.util.List;
 import java.util.Scanner;

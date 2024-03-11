@@ -1,4 +1,4 @@
-package board;
+package com.von.api.board;
 
 
 import lombok.*;

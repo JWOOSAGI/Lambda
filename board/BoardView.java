@@ -1,12 +1,6 @@
-package board;
+package com.von.api.board;
 
 
-import board.Board;
-import common.UtilService;
-import common.UtilServiceImpl;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class BoardView {

@@ -1,9 +1,8 @@
-package user;
+package com.von.api.user;
 
-import common.AbstractService;
-import common.UtilService;
-import common.UtilServiceImpl;
-import enums.Messenger;
+import com.von.api.common.AbstractService;
+import com.von.api.common.UtilServiceImpl;
+import com.von.api.enums.Messenger;
 
 import java.sql.SQLException;
 import java.util.*;

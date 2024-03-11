@@ -1,4 +1,4 @@
-package user;
+package com.von.api.user;
 
 import java.sql.*;
 import java.util.List;
@@ -26,7 +26,7 @@ public class UserRepository {
         return "UserRepository 연결";
     }
     public List<?> findUsers() throws SQLException {
-        String sql = "select * from board";
+        String sql = "select * from com.von.api.board";
         PreparedStatement pstmt  = connection.prepareStatement(sql);
         ResultSet rs = pstmt.executeQuery();
         if(rs.next()) {

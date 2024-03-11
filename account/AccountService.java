@@ -1,4 +1,4 @@
-package account;
+package com.von.api.account;
 
 import java.util.List;
 public interface AccountService {

@@ -1,9 +1,9 @@
-package account;
+package com.von.api.account;
 
 
-import common.AbstractService;
-import enums.Messenger;
-import user.User;
+import com.von.api.common.AbstractService;
+import com.von.api.enums.Messenger;
+import com.von.api.user.User;
 
 import java.util.ArrayList;
 import java.util.List;
