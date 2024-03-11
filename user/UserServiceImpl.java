@@ -143,4 +143,14 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
     public List<?> findUsers() throws SQLException {
         return repository.findUsers();
     }
+
+    @Override
+    public String mktable() throws SQLException {
+        return repository.mktable();
+    }
+
+    @Override
+    public String rmtable() throws SQLException {
+        return repository.rmtable();
+    }
 }

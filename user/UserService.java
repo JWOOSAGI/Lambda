@@ -16,4 +16,6 @@ public interface UserService {
     Map<String, ?> getUserMap();
     String test();
     List<?> findUsers() throws SQLException;
+    String mktable() throws SQLException;
+    String rmtable() throws SQLException;
 }

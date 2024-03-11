@@ -48,4 +48,41 @@ public class UserRepository {
 
         return null;
     }
+
+    public String mktable() throws SQLException {
+        String sql = "SHOW TABLES LIKE 'users';";
+        PreparedStatement pstmt  = connection.prepareStatement(sql);
+        ResultSet rs = pstmt.executeQuery();
+        if (rs.next()) {
+            System.out.println("이미 테이블이 존재합니다.");
+        }else{String createSql = "CREATE TABLE users (\n" +
+                "    id INT AUTO_INCREMENT PRIMARY KEY,\n" +
+                "    username VARCHAR(20) NOT NULL,\n" +
+                "    password VARCHAR(20) NOT NULL,\n" +
+                "    name VARCHAR(20),\n" +
+                "    phone VARCHAR(20),\n" +
+                "    job VARCHAR(20),\n" +
+                "    height VARCHAR(20),\n" +
+                "    weight VARCHAR(20)\n" +
+                ");";
+            PreparedStatement createStmt = connection.prepareStatement(createSql);
+            createStmt.executeUpdate();
+            System.out.println("테이블 'users' 생성 완료");
+            createStmt.close();
+        }
+
+        rs.close();
+        pstmt.close();
+
+        return null;
+    }
+
+    public String rmtable() throws SQLException {
+        String sql = "DROP TABLE users;";
+        PreparedStatement pstmt  = connection.prepareStatement(sql);
+        pstmt.executeUpdate();
+        pstmt.close();
+
+        return null;
+    }
 }

@@ -13,24 +13,21 @@ public class User {
     private String passwordConfirm;
     private String name;
 
-    private String ssn;
-    private String phoneNumber;
-    private String address;
+    private String phone;
+    private Long addressId;
     private String job;
 
     private double height;
     private double weight;
 
     @Builder(builderMethodName = "builder")
-    public User(String username, String password, String passwordConfirm, String name, String ssn, String phoneNumber, String address,
+    public User(String username, String password, String passwordConfirm, String name,  String phone,
                 String job, double height, double weight){
         this.username = username;
         this.password = password;
         this.passwordConfirm = passwordConfirm;
         this.name = name;
-        this.ssn = ssn;
-        this.phoneNumber = phoneNumber;
-        this.address = address;
+        this.phone = phone;
         this.job = job;
         this.height = height;
         this.weight = weight;
@@ -43,9 +40,7 @@ public class User {
         return  "{username=" + username + '\n' +
                 " password=" + password + '\n' +
                 " name=" + name + '\n' +
-                " ssn=" + ssn + '\n' +
-                " phoneNumber=" + phoneNumber + '\n' +
-                " address=" + address + '\n' +
+                " phoneNumber=" + phone + '\n' +
                 " job=" + job +
                 '}'+'\n'+'\n';
     }
