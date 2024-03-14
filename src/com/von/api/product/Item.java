@@ -1,6 +1,6 @@
 package com.von.api.product;
 
-public class Product {
+public class Item {
     public String systemOut(){
 
         return "Hello";
