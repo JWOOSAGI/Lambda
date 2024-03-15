@@ -106,7 +106,13 @@ PRIMARY KEY(id),
 FOREIGN KEY(team_id) REFERENCES team(id)
 );
 show tables;
-select * from schedule;]]></console>
+select * from schedule;
+
+show tables;
+select * from menus;
+desc menus;
+
+select * from menus where category = 'navigate';]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">

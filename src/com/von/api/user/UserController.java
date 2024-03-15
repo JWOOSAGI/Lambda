@@ -10,12 +10,15 @@ import java.util.Scanner;
 
 public class UserController {
 
-    UserServiceImpl service;
-//    UserRepository repository;
+    private static UserController Instance = new UserController();
 
-    public UserController() {
-        this.service = UserServiceImpl.getInstance();
-//        this.repository  = UserRepository.getInstance();
+    private UserServiceImpl service;
+
+    private UserController() {service = UserServiceImpl.getInstance();
+    }
+
+    public static UserController getInstance() {
+        return Instance;
     }
 
     public String addUsers() {

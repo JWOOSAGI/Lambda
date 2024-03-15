@@ -4,19 +4,21 @@ import com.von.api.account.AccountView;
 import com.von.api.articles.ArticleView;
 import com.von.api.board.BoardView;
 import com.von.api.crawler.CrawlerView;
+import com.von.api.menu.MenuController;
 import com.von.api.user.UserView;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Scanner;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-public enum Navigation {
+public enum NavigationOfFunction {
     Exit("x",i->"x"),
     User("u",i-> {
         try {
-            UserView.main(i);
+             UserView.main(i);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -52,12 +54,15 @@ public enum Navigation {
     private final String name;
     private final Function<Scanner, String> function;
 
-    Navigation(String name, Function<Scanner, String> function) {
+    NavigationOfFunction(String name, Function<Scanner, String> function) {
         this.name = name;
         this.function = function;
     }
 
     public static String select(Scanner sc){
+
+//        List<String> ls = MenuController.getInstance();
+
         System.out.println("\n === x-Exit " +
                 "u-User " +
                 "b-Board " +
